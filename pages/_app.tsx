@@ -6,9 +6,12 @@ import NavBar from "../components/NavBar";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThirdwebProvider activeChain={BinanceTestnet}>
+    <ThirdwebProvider 
+      clientId={process.env.NEXT_PUBLIC_CLIENT_ID}
+      activeChain={BinanceTestnet}
+    >
       <ChakraProvider>
-        <NavBar/>
+        <NavBar />
         <Component {...pageProps} />
       </ChakraProvider>
     </ThirdwebProvider>
