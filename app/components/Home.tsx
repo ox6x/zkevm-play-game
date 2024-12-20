@@ -1,12 +1,12 @@
 // pages/index.tsx
 import { useAddress, useContract, useContractRead, useOwnedNFTs } from "@thirdweb-dev/react";
 import { FARMER_ADDRESS, REWARDS_ADDRESS, STAKING_ADDRESS, TOOLS_ADDRESS } from "../const/addresses";
-import { ClaimFarmer } from "../components/Farmer";
-import { Inventory } from "../components/Inventory";
-import { Equipped } from "../components/Equipped";
+import { ClaimFarmer } from "./Farmer";
+import { Inventory } from "./Inventory";
+import { Equipped } from "./Equipped";
 import { BigNumber, ethers } from "ethers";
 import { Text, Box, Card, Container, SimpleGrid, Skeleton, Spinner, Heading } from "@chakra-ui/react";
-import Login from "../components/Login";
+import Login from "./Login";
 
 const Home = () => {
   const address = useAddress();
