@@ -12,6 +12,7 @@ interface MyAppProps extends AppProps {
 
 function MyApp({ Component, pageProps }: MyAppProps) {
   const clientId = process.env.NEXT_PUBLIC_CLIENT_ID;
+  const CLIENT_ID = process.env.NEXT_PUBLIC_CLIENT_ID as string;
 
   return (
     <ThirdwebProvider activeChain={BinanceTestnet}>
