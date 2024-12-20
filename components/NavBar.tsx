@@ -1,17 +1,17 @@
-// components/NavBar.tsx
-import React from 'react';
+import { Container, Flex, Heading, Link } from "@chakra-ui/react";
+import { ConnectWallet } from "@thirdweb-dev/react";
 
-interface NavBarProps {
-  clientId?: string;
-}
-
-const NavBar: React.FC<NavBarProps> = ({ clientId }) => {
-  return (
-    <nav>
-      {/* Use the clientId prop as needed */}
-      <div>Client ID: {clientId}</div>
-    </nav>
-  );
-}
-
-export default NavBar;
+export default function NavBar() {
+    return (
+        <Container maxW={"1200px"} py={4}>
+            <Flex direction={"row"} justifyContent={"space-between"}>
+                <Heading>Crypto Farm</Heading>
+                <Flex alignItems={"center"}>
+                    <Link href={"/"} mx={2}>Play</Link>
+                    <Link href={"/shop"} mx={2}>Shop</Link>
+                </Flex>
+                <ConnectWallet/>
+            </Flex>
+        </Container>
+    )
+};
