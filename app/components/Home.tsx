@@ -1,7 +1,7 @@
 // pages/index.tsx
 import { useAddress, useContract, useContractRead, useOwnedNFTs } from "@thirdweb-dev/react";
 import { FARMER_ADDRESS, REWARDS_ADDRESS, STAKING_ADDRESS, TOOLS_ADDRESS } from "../const/addresses";
-import { ClaimFarmer } from "./Farmer";
+import { ClaimFarmer } from "./ClaimFarmer";
 import { Inventory } from "./Inventory";
 import { Equipped } from "./Equipped";
 import { BigNumber, ethers } from "ethers";
