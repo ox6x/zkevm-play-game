@@ -17,6 +17,7 @@ function MyApp({ Component, pageProps }: MyAppProps) {
   return (
     <ThirdwebProvider activeChain={BinanceTestnet}>
       <ChakraProvider>
+   clientId={CLIENT_ID}
         <NavBar clientId={clientId} />
         <Component {...pageProps} clientId={clientId} />
       </ChakraProvider>
