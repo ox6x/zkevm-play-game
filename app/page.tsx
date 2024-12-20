@@ -3,7 +3,7 @@
 import { useAddress, useOwnedNFTs } from "@thirdweb-dev/react";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import { FARMER_ADDRESS } from "../const/addresses";
+import { FARMER_ADDRESS } from "./const/addresses";
 
 export default function MainPage() {
   const address = useAddress(); // 检查用户是否连接钱包
