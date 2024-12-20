@@ -15,6 +15,10 @@ export function ClaimFarmer() {
             alert("请先连接钱包");
             return;
         }
+        if (!contract) {
+            alert("合约未找到");
+            return;
+        }
         const transaction = claimTo({
             contract,
             to: address,
