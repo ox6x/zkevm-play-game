@@ -4,22 +4,17 @@ import { BinanceTestnet } from "@thirdweb-dev/chains";
 import { ChakraProvider } from "@chakra-ui/react";
 import NavBar from "../components/NavBar";
 
-interface MyAppProps extends AppProps {
-  pageProps: {
-    clientId?: string;
-  };
-}
+// This is the chain your dApp will work on.
+// Change this to the chain your app is built for.
+// You can also import additional chains from `@thirdweb-dev/chains` and pass them directly.
+// const activeChain = "PolygonZkevmTestnet";
 
-function MyApp({ Component, pageProps }: MyAppProps) {
-  const clientId = process.env.NEXT_PUBLIC_CLIENT_ID;
-  const CLIENT_ID = process.env.NEXT_PUBLIC_CLIENT_ID as string;
-
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThirdwebProvider activeChain={BinanceTestnet}>
       <ChakraProvider>
-   clientId={CLIENT_ID}
-        <NavBar clientId={clientId} />
-        <Component {...pageProps} clientId={clientId} />
+        <NavBar/>
+        <Component {...pageProps} />
       </ChakraProvider>
     </ThirdwebProvider>
   );
