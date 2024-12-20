@@ -1,5 +1,5 @@
 {
-  "name": "p2egame",
+  "name": "ac",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -14,8 +14,8 @@
     "@chakra-ui/react": "^2.5.5",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
-    "@thirdweb-dev/react": "^3.14.8",
-    "@thirdweb-dev/sdk": "^3.10.28",
+    "@thirdweb-dev/react": "^4.9.4",
+    "@thirdweb-dev/sdk": "^4.0.99",
     "thirdweb": "^5.77.0",
     "ethers": "^5",
     "framer-motion": "^10.12.2",
