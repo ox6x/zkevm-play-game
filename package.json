@@ -16,6 +16,7 @@
     "@emotion/styled": "^11.10.6",
     "@thirdweb-dev/react": "^3.14.8",
     "@thirdweb-dev/sdk": "^3.10.28",
+    "thirdweb": "^5.77.0",
     "ethers": "^5",
     "framer-motion": "^10.12.2",
     "next": "^13",
