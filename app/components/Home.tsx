@@ -1,11 +1,10 @@
-// pages/index.tsx
-import { useAddress, useContract, useContractRead, useOwnedNFTs } from "@thirdweb-dev/react";
+import { useAddress, useContract, useContractRead, useOwnedNFTs, MediaRenderer } from "@thirdweb-dev/react";
 import { FARMER_ADDRESS, REWARDS_ADDRESS, STAKING_ADDRESS, TOOLS_ADDRESS } from "../const/addresses";
 import { ClaimFarmer } from "./ClaimFarmer";
 import { Inventory } from "./Inventory";
 import { Equipped } from "./Equipped";
 import { BigNumber, ethers } from "ethers";
-import { Text, Box, Card, Container, SimpleGrid, Skeleton, Spinner, Heading } from "@chakra-ui/react";
+import { Text, Box, Card, Container, SimpleGrid, Skeleton, Spinner, Heading, Flex } from "@chakra-ui/react";
 import Login from "./Login";
 
 const Home = () => {
@@ -19,8 +18,8 @@ const Home = () => {
   const { data: ownedFarmers, isLoading: loadingOwnedFarmers } = useOwnedNFTs(farmercontract, address);
   const { data: ownedTools, isLoading: loadingOwnedTools } = useOwnedNFTs(toolsContract, address);
 
-  const { data: equippedTools } = useContractRead(stakingContract, "getStakeInfo", [address]);
-  const { data: rewardBalance } = useContractRead(rewardContract, "balanceOf", [address]);
+  const { data: equippedTools } = useContractRead(stakingContract, "getStakeInfo", address ? [address] : []);
+  const { data: rewardBalance } = useContractRead(rewardContract, "balanceOf", address ? [address] : []);
 
   if (!address) {
     return <Login />;
