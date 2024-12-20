@@ -2,7 +2,7 @@ import { PropsWithChildren } from "react";
 import { ThirdwebProvider } from "@thirdweb-dev/react";
 import { ChakraProvider, Box } from "@chakra-ui/react";
 import NavBar from "../components/NavBar";
-import "./globals.css"; // 确保全局样式文件在此引入
+import "./styles/globals.css"; // 确保全局样式文件在此引入
 import Head from "next/head";
 
 const CLIENT_ID = process.env.NEXT_PUBLIC_CLIENT_ID as string;
