@@ -10,11 +10,13 @@ import NavBar from "../components/NavBar";
 // const activeChain = "PolygonZkevmTestnet";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const clientId = process.env.NEXT_PUBLIC_CLIENT_ID;
+
   return (
     <ThirdwebProvider activeChain={BinanceTestnet}>
       <ChakraProvider>
-        <NavBar/>
-        <Component {...pageProps} />
+        <NavBar clientId={clientId} />
+        <Component {...pageProps} clientId={clientId} />
       </ChakraProvider>
     </ThirdwebProvider>
   );
